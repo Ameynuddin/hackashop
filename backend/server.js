@@ -21,7 +21,9 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.get('/', (req, res) => {
+    res.send('Server is ready');
+})
 app.get('/api/keys/paypal', (req, res) => {
     console.log('PayPal Client ID:', process.env.PAYPAL_CLIENT_ID);
     res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
