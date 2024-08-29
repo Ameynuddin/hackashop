@@ -37,7 +37,7 @@ function ProfileScreen() {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        `${process.env.API_URL}/api/users/profile`,
+        `${process.env.REACT_APP_API_URL}/api/users/profile`,
         {
           name,
           email,

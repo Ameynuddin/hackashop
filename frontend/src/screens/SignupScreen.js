@@ -29,7 +29,7 @@ export default function SignupScreen() {
       return;
     }
     try {
-      const { data } = await Axios.post(`${process.env.API_URL}/api/users/signup`, {
+      const { data } = await Axios.post(`${process.env.REACT_APP_API_URL}/api/users/signup`, {
         name,
         email,
         password,
