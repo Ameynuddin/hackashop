@@ -16,7 +16,7 @@ function AllProdScreen() {
   useEffect(() => {
     // Fetch products from MongoDB database
     axios
-      .get("/api/products")
+      .get(`${process.env.API_URL}/api/products`)
       .then((response) => {
         setProducts(response.data);
       })

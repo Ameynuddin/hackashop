@@ -18,7 +18,7 @@ function CatScreen() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.get("/api/products");
+        const { data } = await axios.get(`${process.env.API_URL}/api/products`);
         const categories = [
           ...new Set(data.map((product) => product.category)),
         ];
@@ -39,7 +39,7 @@ function CatScreen() {
   const handleSearch = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.get(`/api/products`);
+      const { data } = await axios.get(`${process.env.API_URL}/api/products`);
       const filtered = data.filter((product) =>
         product.name.toLowerCase().includes(searchTerm.toLowerCase())
       );

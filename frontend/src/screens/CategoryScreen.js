@@ -18,7 +18,7 @@ function CategoryScreen() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const { data } = await axios.get(`/api/products/category/${category}`);
+        const { data } = await axios.get(`${process.env.API_URL}/api/products/category/${category}`);
         setProducts(data);
       } catch (error) {
         setError("Failed to fetch products. Please try again later.");
@@ -30,7 +30,7 @@ function CategoryScreen() {
   const addToCartHandler = async (product) => {
     const existItem = cartItems.find((x) => x._id === product._id);
     const quantity = existItem ? existItem.quantity + 1 : 1;
-    const { data } = await axios.get(`/api/products/${product._id}`);
+    const { data } = await axios.get(`${process.env.API_URL}/api/products/${product._id}`);
     if (data.countInStock < quantity) {
       window.alert('Sorry. Product is out of stock');
       return;
