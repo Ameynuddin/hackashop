@@ -6,8 +6,7 @@ import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-// import data from '../data';
-
+import HomeCarousel from '../components/HomeCarousel';
 
 const logger = (reducer) => {
     return (state, action) => {
@@ -59,6 +58,9 @@ function HomeScreen() {
             <Helmet>
                 <title>Hackashop</title>
             </Helmet>
+
+            <HomeCarousel />
+
             <h1>Featured Products</h1>
             <div className="products">
                 {loading ? (
