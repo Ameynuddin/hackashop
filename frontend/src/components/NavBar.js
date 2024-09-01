@@ -21,26 +21,23 @@ function NavBar() {
     };
 
     return (
-        <Navbar bg="primary" data-bs-theme="dark">
+        <Navbar expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
             <Container>
-                <LinkContainer to="/">
-                    <Navbar.Brand>
-                        <img
-                            src="/wardrobe.png"
-                            alt="Hackashop Logo"
-                            width="30"
-                            height="30"
-                            className="d-inline-block align-top"
-                        />{' '}
-                        Hackashop
-                    </Navbar.Brand>
-                </LinkContainer>
+                <Navbar.Brand href="/">
+                    <img
+                        src="/wardrobe.png"
+                        alt="Hackashop Logo"
+                        width="30"
+                        height="30"
+                    // className="margin-10 d-inline-block align-top"  
+                    /> Hackashop
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Link to="/categories/all-products" className="nav-link">
-                            Products
-                        </Link>
+                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="#link">Link</Nav.Link>
+                        <Link to="/categories/all-products" className="nav-link">Products</Link>
                         <Link to="/cart" className="nav-link">
                             Cart
                             {cart.cartItems.length > 0 && (
@@ -73,7 +70,6 @@ function NavBar() {
                         )}
                     </Nav>
                 </Navbar.Collapse>
-
             </Container>
         </Navbar>
     );
