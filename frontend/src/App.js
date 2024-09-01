@@ -4,7 +4,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/NavBar';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
-import Container from 'react-bootstrap/Container';
 import CartScreen from './screens/CartScreen';
 import SigninScreen from './screens/SigninScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
@@ -18,6 +17,7 @@ import CategoryScreen from './screens/CategoryScreen';
 import AllProdScreen from './screens/AllProdScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import './App.css';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -54,7 +54,7 @@ function App() {
         </main>
 
         <footer>
-          <div className="text-center">All rights reserved</div>
+          <Footer />
         </footer>
       </div>
     </BrowserRouter >
