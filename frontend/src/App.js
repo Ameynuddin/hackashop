@@ -17,50 +17,47 @@ import CatScreen from './screens/CatScreen';
 import CategoryScreen from './screens/CategoryScreen';
 import AllProdScreen from './screens/AllProdScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
-
+import './App.css';
 
 
 function App() {
-
   return (
     <BrowserRouter>
       <div className="d-flex flex-column site-container">
         <ToastContainer position="bottom-center" limit={1} />
-
         <header>
           <Navbar />
         </header>
 
         <main>
-          <Container className="mt-3">
-            <Routes>
+
+            {/* <Container className="mt-3"> */}
+          <Routes>
+              <Route path="/" element={<HomeScreen />} />
               <Route path="/product/:slug" element={<ProductScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
               <Route path="/placeorder" element={<PlaceOrderScreen />} />
               <Route path="/order/:id" element={<OrderScreen />} />
-              <Route
-                path="/shipping"
-                element={<ShippingAddressScreen />}
-              ></Route>
+              <Route path="/shipping" element={<ShippingAddressScreen />} />
               <Route path="/payment" element={<PaymentMethodScreen />} />
-              <Route path="/profile" element={<ProfileScreen />} ></Route>
-              <Route path="/" element={<HomeScreen />} />
+              <Route path="/profile" element={<ProfileScreen />} />
               <Route path="/categories/*" element={<CatScreen />}>
                 <Route path=":category" element={<CategoryScreen />} />
                 <Route path="all-products" element={<AllProdScreen />} />
               </Route>
               <Route path="/orderhistory" element={<OrderHistoryScreen />} />
-            </Routes>
-          </Container>
+          </Routes>
+            {/* </Container> */}
+
         </main>
-        
+
         <footer>
           <div className="text-center">All rights reserved</div>
         </footer>
       </div>
-    </BrowserRouter>
+    </BrowserRouter >
   );
 }
 
