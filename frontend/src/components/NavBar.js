@@ -21,7 +21,8 @@ function NavBar() {
     };
 
     return (
-        <Navbar expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
+        // <Navbar expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
+        <Navbar expand="lg" style={{ backgroundColor: "#e994d4", fontWeight: "bold" , fontSize: "1rem", padding: "1rem 0"}} >
             <Container>
                 <Navbar.Brand href="/">
                     <img
