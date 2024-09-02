@@ -57,11 +57,6 @@ export default function NavBar() {
 
                 <MDBCollapse navbar open={openNav}>
                     <MDBNavbarNav className="d-flex align-items-center w-100">
-                        {/* Sign In Button - Always visible, aligned to the left */}
-                        <MDBNavbarItem className='px-3 d-lg-none'>
-                            <MDBBtn primary href="/signin">Sign In</MDBBtn>
-                        </MDBNavbarItem>
-
                         <MDBNavbarItem>
                             <MDBNavbarLink active aria-current='page' href="/categories/all-products">Products</MDBNavbarLink>
                         </MDBNavbarItem>
