@@ -1,6 +1,6 @@
 # Hackashop E-commerce Platform
 
-Live Demo: https://hackashop-1e4e7bb215b9.herokuapp.com
+Live Demo: https://hackashop.onrender.com
 
 ## Overview
 
