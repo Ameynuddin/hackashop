@@ -10,16 +10,15 @@ import {
 function Footer() {
     return (
         <MDBFooter className='bg-dark text-center text-white'>
-            <MDBContainer className='p-3 pb-0'>
+            {/* <MDBContainer className='p-1 pb-0'> */}
 
-                <section className=''>
-                    <MDBContainer className='text-center text-md-start mt-5'>
+                <section className='d-flex justify-content-center pt-4'>
+                    <MDBContainer className='text-md-start text-center'>
                         <MDBRow className='mt-2'>
                             <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
-                                <h4 className='text-uppercasefw-bold mb-4'>
-                                    <MDBIcon color='secondary' icon='gem' className='me-3' />
-                                    Hackashop
-                                </h4>
+                                <h5 className='text-uppercase mb-4'>
+                                    <MDBIcon color='secondary' icon='gem' className='me-3' />Hackashop
+                                </h5>
                                 <p>
                                     Lorem ipsum dolor sit
                                     amet, consectetur adipisicing elit.
@@ -27,7 +26,7 @@ function Footer() {
                             </MDBCol>
 
                             <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
-                                <h4 className='text-uppercase fw-bold mb-4'>Products</h4>
+                                <h5 className='mb-4'>Products</h5>
                                 <p>
                                     <a href='#!' className='text-reset'>
                                         Angular
@@ -50,8 +49,8 @@ function Footer() {
                                 </p>
                             </MDBCol>
 
-                            <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4'>
-                                <h4 className='text-uppercase fw-bold mb-4'>Useful links</h4>
+                            <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
+                                <h5 className='mb-4'>Useful Links</h5>
                                 <p>
                                     <a href='#!' className='text-reset'>
                                         Pricing
@@ -74,10 +73,10 @@ function Footer() {
                                 </p>
                             </MDBCol>
 
-                            <MDBCol md='4' lg='3' xl='3' className='mx-auto mb-md-0 mb-4'>
-                                <h4 className='text-uppercase fw-bold mb-4'>Contact</h4>
+                            <MDBCol md='5' lg='4' xl='3' className='mx-0 mb-md-0'>
+                                <h5 className='mb-4'>Contact</h5>
                                 <p>
-                                    <MDBIcon color='secondary' icon='home' className='me-2' />
+                                    <MDBIcon color='secondary' icon='home' className='me-3' />
                                     Kuala Lumpur, Malaysia
                                 </p>
                                 <p>
@@ -155,7 +154,7 @@ function Footer() {
                         <MDBIcon fab icon='github' />
                     </MDBBtn>
                 </section>
-            </MDBContainer>
+            {/* </MDBContainer> */}
 
             <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
                 © 2024 Copyright:
