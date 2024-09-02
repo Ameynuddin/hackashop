@@ -51,13 +51,13 @@
 
 @media (max-width: 480px) {
   .content .text h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .content .text h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .content .text .btn {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .content .image img {
     max-height: 30vh;
