@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { Card, Button, Alert} from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Rating from '../components/Rating';
-import { useContext } from 'react';
 import { Store } from '../Store';
 
 function CategoryScreen() {
