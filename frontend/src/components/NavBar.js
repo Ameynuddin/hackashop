@@ -36,14 +36,17 @@ export default function NavBar() {
     return (
         <MDBNavbar expand='lg' sticky light bgColor='light' className='fs-5'>
             <MDBContainer fluid>
-                <MDBNavbarBrand href="/" className='px-3'>
-                    <img
-                        src="/wardrobe.png"
-                        alt="Hackashop Logo"
-                        width="30"
-                        height="30"
-                        className="px-10"
-                    /><span className="fw-bold"> Hackashop</span>
+                <MDBNavbarBrand href="/">
+                    <div className='px-2'>
+                        <img
+                            src="/wardrobe.png"
+                            alt="Hackashop Logo"
+                            width="30"
+                            height="30"
+                        /></div>
+                    <div>
+                        <span className="fw-bold">Hackashop</span>
+                    </div>
                 </MDBNavbarBrand>
 
                 <MDBNavbarToggler
