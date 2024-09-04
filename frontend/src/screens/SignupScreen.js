@@ -49,8 +49,8 @@ export default function SignupScreen() {
   }, [navigate, redirect, userInfo]);
 
   return (
-    <Container className="small-container">
-      <Helmet>
+    <Container className="small-container mt-4 mb-4 p-3 ps-5 pe-5">
+      <Helmet className=''>
         <title>Sign Up</title>
       </Helmet>
       <h1 className="my-3">Sign Up</h1>

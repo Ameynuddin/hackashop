@@ -45,6 +45,7 @@ function CatScreen() {
       );
       setFilteredProducts(filtered);
       setNoProductsFound(filtered.length === 0); // Set noProductsFound to true if filtered products are empty
+      setSearchTerm("");
     } catch (error) {
       setError("Failed to fetch products. Please try again later.");
     }
@@ -57,40 +58,39 @@ function CatScreen() {
 
   return (
     <Container>
-      <Link to="/" className="btn btn-secondary mb-2">
-      &lt; Home
-      </Link>
-      <div className="text-center">
-        <h1 className="mb-4">All Products</h1>
+       <div className="text-center">
+        <h1 className="mb-4 mt-4">All Products</h1>
+       
         {error && <Alert variant="danger">{error}</Alert>}
-        <Row className="justify-content-between align-items-center mb-3">
-          <Col className="d-flex flex-wrap">
-            <Link to={`/categories/all-products`}>
-              <Button className="custom-button me-2">All</Button>
+        <Row className="justify-content-between align-items-center mb-3 g-3">
+          <Col className="d-flex flex-wrap justify-content-center justify-content-md-start" sm={7} md={8} lg={8}>
+            <Link to={`/categories/all-products`} className="gx-5">
+              <Button className="custom-button m-2 p-2">All</Button>
             </Link>
             {categories.map((category) => (
               <Link to={`/categories/${category}`} key={category}>
-                <Button className="custom-button me-2">{category}</Button>
+                <Button className="custom-button m-2 p-2">{category}</Button>
               </Link>
             ))}
           </Col>
-          <Col className="d-flex justify-content-end">
+
+          <Col className="d-flex justify-content-center" sm={5} md={4} lg={4}>
             <Form onSubmit={handleSearch} className="d-flex">
               <Form.Control
                 type="text"
                 placeholder="Search products..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="me-2"
+                className="search-input-container"  
               />
-              <Button variant="dark" type="submit">
+              <Button variant="dark" type="submit" className="px-2">
                 Search
               </Button>
             </Form>
           </Col>
         </Row>
        
-        <Row className="justify-content-center mt-3">
+        <Row className="justify-content-center mt-3 mb-4">
           {filteredProducts.length > 0 ? (
             <FilteredProducts products={filteredProducts} />
           ) : noProductsFound ? (

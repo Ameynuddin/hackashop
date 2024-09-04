@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Container } from 'react-bootstrap';
 
 export default function CartScreen() {
     const navigate = useNavigate();
@@ -37,58 +38,66 @@ export default function CartScreen() {
     };
 
     return (
-        <div>
+        <Container>
             <Helmet>
                 <title>Shopping Cart</title>
             </Helmet>
-            <h1>Shopping Cart</h1>
-            <Row>
-                <Col md={8}>
+
+            <h1 className='mt-4 mb-4'>Shopping Cart</h1>
+
+            <Row className = 'mb-4 g-3'>
+                <Col md={7} lg={6}>
                     {cartItems.length === 0 ? (
                         <MessageBox>
-                            Cart is empty. <Link to="/">Go Shopping</Link>
+                            Cart is empty. <Link to="/categories/all-products">Go Shopping</Link>
                         </MessageBox>
                     ) : (
                         <ListGroup>
                             {cartItems.map((item) => (
-                                <ListGroup.Item key={item._id}>
-                                    <Row className="align-items-center">
-                                        <Col md={4}>
+                                <ListGroup.Item key={item._id} className='shadow'>
+                                    <Row className="d-flex justify-content-center align-items-center text-align-center">
+                                        <Col xs={12} md={6} className='d-flex flex-wrap justify-content-center'>
                                             <img
                                                 src={item.image}
                                                 alt={item.name}
-                                                className="img-fluid rounded img-thumbnail"
-                                            ></img>{' '}
-                                            <Link to={`/product/${item.slug}`}>{item.name}</Link>
+                                                className="img-fluid rounded img-thumbnail border-0"
+                                            ></img>
+                                            <Link to={`/product/${item.slug}`} className='fw-bold mt-2'>{item.name}</Link>
                                         </Col>
-                                        <Col md={3}>
+
+                                        <Col xs={2} md={3} className='d-flex justify-content-center align-items-center'>
                                             <Button
                                                 onClick={() =>
                                                     updateCartHandler(item, item.quantity - 1)
                                                 }
                                                 variant="light"
                                                 disabled={item.quantity === 1}
+                                                className='p-2 m-2'
                                             >
                                                 <i className="fas fa-minus-circle"></i>
-                                            </Button>{' '}
-                                            <span>{item.quantity}</span>{' '}
+                                            </Button>
+                                            <span>{item.quantity}</span>
                                             <Button
                                                 variant="light"
                                                 onClick={() =>
                                                     updateCartHandler(item, item.quantity + 1)
                                                 }
                                                 disabled={item.quantity === item.countInStock}
+                                                className='p-2 m-2'
                                             >
                                                 <i className="fas fa-plus-circle"></i>
                                             </Button>
                                         </Col>
-                                        <Col md={3}>${item.price}</Col>
-                                        <Col md={2}>
+
+                                        <Col xs={2} md={2} className='d-flex justify-content-center align-items-center'>${item.price}</Col>
+
+                                        <Col xs={1} md={1} className='d-flex justify-content-center align-items-center'>
                                             <Button
                                                 onClick={() => removeItemHandler(item)}
                                                 variant="light"
+                                                className='p-2 m-2'
                                             >
-                                                <i className="fas fa-trash"></i>
+                                                <i className="fas fa-trash text-danger"></i>
                                             </Button>
                                         </Col>
                                     </Row>
@@ -97,12 +106,12 @@ export default function CartScreen() {
                         </ListGroup>
                     )}
                 </Col>
-                <Col md={4}>
+                <Col md={5} lg={6}>
                     <Card>
                         <Card.Body>
                             <ListGroup variant="flush">
                                 <ListGroup.Item>
-                                    <h3>
+                                    <h3 className='fs-4'>
                                         Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
                                         items) : $
                                         {cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}
@@ -125,6 +134,6 @@ export default function CartScreen() {
                     </Card>
                 </Col>
             </Row>
-        </div>
+        </Container>
     );
 }

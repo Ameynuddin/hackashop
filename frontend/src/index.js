@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { StoreProvider } from './Store';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
