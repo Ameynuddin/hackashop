@@ -15,7 +15,7 @@ import {
     MDBDropdownMenu,
     MDBDropdownItem,
     MDBCollapse,
-} from 'mdb-react-ui-kit';44
+} from 'mdb-react-ui-kit';
 import { Store } from '../Store';
 
 export default function NavBar() {
