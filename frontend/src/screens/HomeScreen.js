@@ -62,8 +62,9 @@ function HomeScreen() {
 
             <HomeCarousel />
             {/* <Container> */}
-                <div className="container-fluid p-5 bg-light" style={{ overflowX: 'hidden'}}>
+            <div className="container-fluid p-5 bg-light" style={{ overflowX: 'hidden' }}>
                 <h1 className='text-center text-uppercase display-3 fw-bold mt-4 mb-3'>Featured Products</h1>
+                <hr className="hr hr-blurry mb-3" />
                 <div className="products" >
                     {loading ? (
                         <LoadingBox />
