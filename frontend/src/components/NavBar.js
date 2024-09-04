@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
     MDBContainer,
     MDBNavbar,
@@ -15,8 +15,7 @@ import {
     MDBDropdownMenu,
     MDBDropdownItem,
     MDBCollapse,
-} from 'mdb-react-ui-kit';
-import { useContext } from 'react';
+} from 'mdb-react-ui-kit';44
 import { Store } from '../Store';
 
 export default function NavBar() {
@@ -43,7 +42,8 @@ export default function NavBar() {
                             alt="Hackashop Logo"
                             width="30"
                             height="30"
-                        /></div>
+                        />
+                    </div>
                     <div>
                         <span className="fw-bold">Hackashop</span>
                     </div>

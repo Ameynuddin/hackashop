@@ -19,7 +19,6 @@ import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import './App.css';
 import Footer from './components/Footer';
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -30,27 +29,23 @@ function App() {
         </header>
 
         <main>
-
-            {/* <Container className="mt-3"> */}
           <Routes>
-              <Route path="/" element={<HomeScreen />} />
-              <Route path="/product/:slug" element={<ProductScreen />} />
-              <Route path="/cart" element={<CartScreen />} />
-              <Route path="/signin" element={<SigninScreen />} />
-              <Route path="/signup" element={<SignupScreen />} />
-              <Route path="/placeorder" element={<PlaceOrderScreen />} />
-              <Route path="/order/:id" element={<OrderScreen />} />
-              <Route path="/shipping" element={<ShippingAddressScreen />} />
-              <Route path="/payment" element={<PaymentMethodScreen />} />
-              <Route path="/profile" element={<ProfileScreen />} />
-              <Route path="/categories/*" element={<CatScreen />}>
-                <Route path=":category" element={<CategoryScreen />} />
-                <Route path="all-products" element={<AllProdScreen />} />
-              </Route>
-              <Route path="/orderhistory" element={<OrderHistoryScreen />} />
+            <Route path="/" element={<HomeScreen />} />
+            <Route path="/product/:slug" element={<ProductScreen />} />
+            <Route path="/cart" element={<CartScreen />} />
+            <Route path="/signin" element={<SigninScreen />} />
+            <Route path="/signup" element={<SignupScreen />} />
+            <Route path="/placeorder" element={<PlaceOrderScreen />} />
+            <Route path="/order/:id" element={<OrderScreen />} />
+            <Route path="/shipping" element={<ShippingAddressScreen />} />
+            <Route path="/payment" element={<PaymentMethodScreen />} />
+            <Route path="/profile" element={<ProfileScreen />} />
+            <Route path="/categories/*" element={<CatScreen />}>
+              <Route path=":category" element={<CategoryScreen />} />
+              <Route path="all-products" element={<AllProdScreen />} />
+            </Route>
+            <Route path="/orderhistory" element={<OrderHistoryScreen />} />
           </Routes>
-            {/* </Container> */}
-
         </main>
 
         <footer>
