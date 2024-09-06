@@ -96,9 +96,12 @@ Have the following installed:
 
 Displays a list of all products. Users can browse and select products to view details.
 
+
 ### Product Screen
 
 Displays detailed information about a selected product. Users can add the product to their cart.
+![products](frontend/public/output/home.png)
+
 
 ### Cart Screen
 
