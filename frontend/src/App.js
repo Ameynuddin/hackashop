@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/NavBar';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
-import CartScreen from './screens/CartScreen';
+import CartScreen from './screens/CartScreen'; 
 import SigninScreen from './screens/SigninScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SignupScreen from './screens/SignupScreen';
