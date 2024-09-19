@@ -96,28 +96,41 @@ Have the following installed:
 
 Displays a list of all products. Users can browse and select products to view details.
 
+![home](frontend/public/output/home.png)
+
 
 ### Product Screen
 
 Displays detailed information about a selected product. Users can add the product to their cart.
-![products](frontend/public/output/home.png)
+
+![products](frontend/public/output/products.png)
 
 
 ### Cart Screen
 
 Displays the user's shopping cart. Users can modify quantities and proceed to checkout.
 
+![cart](frontend/public/output/cart.png)
+
 ### Sign In / Sign Up Screen
 
 Allows users to create an account or sign in to an existing account.
+
+![sign in](frontend/public/output/sign_in.png)
+
+![sign up](frontend/public/output/sign_up.png)
 
 ### Profile Screen
 
 Allows authenticated users to view and update their profile information.
 
+![profile](frontend/public/output/profile.png)
+
 ### Order History Screen
 
 Displays the authenticated user's past orders.
+
+![order_history](frontend/public/output/order_history.png)
 
 
 ## License
